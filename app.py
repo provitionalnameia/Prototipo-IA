@@ -1,6 +1,9 @@
 from flask import Flask, render_template
+import os
 
-app = Flask(__name__)
+template_dir = os.path.abspath('templates')
+
+app = Flask(__name__, template_folder=template_dir)
 
 @app.route("/")
 def home():
@@ -8,39 +11,15 @@ def home():
 
 @app.route("/atencion")
 def atencion():
-    return """
-    <h1 style='color:white;
-    font-family:Arial;
-    text-align:center;
-    margin-top:100px;
-    background:black;'>
-    Página de atención al cliente próximamente
-    </h1>
-    """
+    return "<h1>Atención al cliente</h1>"
 
 @app.route("/automatizacion")
 def automatizacion():
-    return """
-    <h1 style='color:white;
-    font-family:Arial;
-    text-align:center;
-    margin-top:100px;
-    background:black;'>
-    Página de procesos próximamente
-    </h1>
-    """
+    return "<h1>Procesos automáticos</h1>"
 
 @app.route("/estadisticas")
 def estadisticas():
-    return """
-    <h1 style='color:white;
-    font-family:Arial;
-    text-align:center;
-    margin-top:100px;
-    background:black;'>
-    Página de estadísticas próximamente
-    </h1>
-    """
+    return "<h1>Estadísticas IA</h1>"
 
 if __name__ == "__main__":
     app.run(debug=True)

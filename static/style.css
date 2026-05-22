@@ -1,17 +1,17 @@
 body{
 
+    margin:0;
+
+    font-family:Arial, sans-serif;
+
     background:
     radial-gradient(
         circle at top,
-        #1a1a1a,
-        #050505 60%
+        #151515,
+        #050505 65%
     );
 
     color:white;
-
-    font-family:'Poppins', sans-serif;
-
-    margin:0;
 
     overflow-x:hidden;
 }
@@ -20,32 +20,45 @@ body{
 
 nav{
 
-    display:flex;
-
-    justify-content:flex-end;
-
-    align-items:center;
-
-    padding:30px 80px;
-
     position:fixed;
 
     width:100%;
 
-    z-index:1000;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px 70px;
+
+    box-sizing:border-box;
 
     backdrop-filter:blur(10px);
 
-    background:rgba(0,0,0,0.15);
+    background:rgba(0,0,0,0.18);
+
+    z-index:1000;
+}
+
+.logo{
+
+    color:#f5deb3;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
 }
 
 ul{
 
     display:flex;
 
-    list-style:none;
-
     gap:50px;
+
+    list-style:none;
 }
 
 li{
@@ -54,25 +67,23 @@ li{
 
     transition:0.3s;
 
-    font-size:15px;
-
-    letter-spacing:1px;
+    color:#d6d6d6;
 }
 
 li:hover{
 
-    color:#e5c76b;
+    color:#d4af37;
 }
 
 /* HERO */
 
 .hero{
 
+    position:relative;
+
     min-height:100vh;
 
     display:flex;
-
-    flex-direction:column;
 
     justify-content:center;
 
@@ -83,42 +94,87 @@ li:hover{
     padding:0 20px;
 }
 
-h1{
+.hero-overlay{
 
-    font-size:64px;
+    position:absolute;
 
-    max-width:950px;
+    width:700px;
 
-    line-height:1.1;
+    height:700px;
 
-    margin:0;
+    background:
+    radial-gradient(
+        circle,
+        rgba(212,175,55,0.08),
+        transparent 70%
+    );
+
+    filter:blur(40px);
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1000px;
+}
+
+.mini-title{
+
+    color:#c9a227;
+
+    letter-spacing:4px;
+
+    font-size:14px;
+}
+
+.hero h1{
+
+    font-size:82px;
+
+    line-height:1.05;
+
+    margin-top:25px;
+
+    margin-bottom:25px;
 
     color:#f5deb3;
 
-    font-weight:700;
-
     text-shadow:
-    0px 0px 20px rgba(229,199,107,0.15);
+    0px 0px 30px rgba(212,175,55,0.1);
 }
 
 .hero p{
 
-    margin-top:30px;
+    font-size:22px;
 
-    font-size:20px;
+    line-height:1.8;
 
     color:#b8b8b8;
 
-    max-width:700px;
+    max-width:800px;
 
-    line-height:1.6;
+    margin:auto;
 }
 
-/* BUTTON */
+/* BUTTONS */
 
-button{
+.hero-buttons{
 
     margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.gold-btn{
 
     padding:18px 42px;
 
@@ -137,24 +193,45 @@ button{
 
     font-size:16px;
 
-    font-weight:600;
+    font-weight:bold;
 
     cursor:pointer;
 
     transition:0.35s;
-
-    box-shadow:
-    0px 10px 40px rgba(201,162,39,0.18);
 }
 
-button:hover{
+.gold-btn:hover{
 
     transform:
-    translateY(-3px)
-    scale(1.02);
+    translateY(-5px);
 
     box-shadow:
-    0px 15px 50px rgba(201,162,39,0.3);
+    0px 15px 50px rgba(212,175,55,0.25);
+}
+
+.dark-btn{
+
+    padding:18px 42px;
+
+    border-radius:14px;
+
+    border:
+    1px solid rgba(255,255,255,0.15);
+
+    background:
+    rgba(255,255,255,0.03);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.35s;
+}
+
+.dark-btn:hover{
+
+    background:
+    rgba(255,255,255,0.08);
 }
 
 /* CARDS */
@@ -165,107 +242,30 @@ button:hover{
 
     justify-content:center;
 
-    flex-wrap:wrap;
-
     gap:35px;
 
-    padding-bottom:120px;
+    flex-wrap:wrap;
 
-    margin-top:-80px;
+    margin-top:-120px;
+
+    padding-bottom:140px;
+
+    position:relative;
+
+    z-index:5;
 }
 
 .card{
-
-    background:
-    rgba(255,255,255,0.03);
-
-    border:
-    1px solid rgba(255,255,255,0.06);
-
-    width:280px;
-
-    padding:40px;
-
-    border-radius:24px;
-
-    backdrop-filter:blur(12px);
-
-    transition:0.35s;
-
-    text-decoration:none;
-
-    color:white;
-}
-
-.card:hover{
-
-    transform:
-    translateY(-10px);
-
-    border:
-    1px solid rgba(229,199,107,0.3);
-
-    box-shadow:
-    0px 10px 40px rgba(0,0,0,0.4);
-
-    cursor:pointer;
-}
-
-.card h3{
-
-    color:#f5deb3;
-
-    font-size:24px;
-
-    margin-bottom:15px;
-}
-
-.card p{
-
-    color:#bdbdbd;
-
-    line-height:1.7;
-}
-
-/* HOW IT WORKS */
-
-.steps{
-
-    padding:120px 20px;
-
-    text-align:center;
-}
-
-.steps h2{
-
-    font-size:52px;
-
-    color:#f5deb3;
-
-    margin-bottom:70px;
-
-    text-shadow:
-    0px 0px 20px rgba(229,199,107,0.15);
-}
-
-.steps-container{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:35px;
-
-    flex-wrap:wrap;
-}
-
-.step{
 
     width:280px;
 
     padding:45px;
 
-    border-radius:24px;
+    border-radius:28px;
+
+    text-decoration:none;
+
+    color:white;
 
     background:
     rgba(255,255,255,0.03);
@@ -273,92 +273,46 @@ button:hover{
     border:
     1px solid rgba(255,255,255,0.08);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(14px);
 
     transition:0.4s;
 }
 
-.step:hover{
+.card:hover{
 
     transform:
     translateY(-12px);
 
     border:
-    1px solid rgba(229,199,107,0.35);
+    1px solid rgba(212,175,55,0.25);
 
     box-shadow:
-    0px 10px 50px rgba(0,0,0,0.45);
+    0px 20px 60px rgba(0,0,0,0.45);
 }
 
-.step span{
+.card-number{
 
-    font-size:42px;
-
-    font-weight:bold;
+    font-size:14px;
 
     color:#c9a227;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
 }
 
-.step h3{
-
-    margin-top:20px;
-
-    font-size:28px;
+.card h3{
 
     color:#f5deb3;
+
+    font-size:30px;
+
+    margin-bottom:18px;
 }
 
-.step p{
+.card p{
 
-    margin-top:15px;
+    color:#b8b8b8;
 
-    color:#bdbdbd;
-
-    line-height:1.7;
-}
-
-/* SCROLL ANIMATION */
-
-.card,
-.step{
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-    animation:fadeUp 1s ease forwards;
-}
-
-.step:nth-child(1){
-    animation-delay:0.2s;
-}
-
-.step:nth-child(2){
-    animation-delay:0.4s;
-}
-
-.step:nth-child(3){
-    animation-delay:0.6s;
-}
-
-.card:nth-child(1){
-    animation-delay:0.3s;
-}
-
-.card:nth-child(2){
-    animation-delay:0.5s;
-}
-
-.card:nth-child(3){
-    animation-delay:0.7s;
-}
-
-@keyframes fadeUp{
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-    }
+    line-height:1.8;
 }

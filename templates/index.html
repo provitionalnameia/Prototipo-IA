@@ -300,7 +300,7 @@
 
     <div class="language-flash"></div>
 
-    <!-- LANGUAGE SYSTEM -->
+    <!-- SCRIPT -->
 
     <script>
 
@@ -424,127 +424,8 @@
 
             stat4text:
             "Solicitudes procesadas"
-        },
-
-        zh: {
-
-            logo: "AI 系统",
-
-            services: "服务",
-            automation: "自动化",
-            contact: "联系",
-
-            mini:
-            "现代企业人工智能",
-
-            title:
-            "现代企业智能自动化",
-
-            description:
-            "我们创建优雅的人工智能系统，用于自动化流程并提升企业效率。",
-
-            button1:
-            "开始",
-
-            button2:
-            "演示",
-
-            card1:
-            "AI 支持",
-
-            card1desc:
-            "实时智能客户支持。",
-
-            card2:
-            "自动化",
-
-            card2desc:
-            "现代企业智能自动化系统。",
-
-            card3:
-            "分析",
-
-            card3desc:
-            "AI驱动的高级数据分析。",
-
-            dashboardTitle:
-            "人工智能分析",
-
-            dashboardSubtitle:
-            "实时智能企业监控。",
-
-            stat1text:
-            "自动化效率",
-
-            stat2text:
-            "生产增长",
-
-            stat3text:
-            "AI 系统",
-
-            stat4text:
-            "处理请求"
-        },
-
-        jp: {
-
-            logo: "AI システム",
-
-            services: "サービス",
-            automation: "自動化",
-            contact: "連絡先",
-
-            mini:
-            "現代企業向け人工知能",
-
-            title:
-            "現代企業向けAI自動化",
-
-            description:
-            "AIシステムによって業務を自動化し、生産性を向上させます。",
-
-            button1:
-            "開始",
-
-            button2:
-            "デモ",
-
-            card1:
-            "AIサポート",
-
-            card1desc:
-            "リアルタイムの顧客サポート。",
-
-            card2:
-            "自動化",
-
-            card2desc:
-            "現代企業向け自動化システム。",
-
-            card3:
-            "分析",
-
-            card3desc:
-            "AIによる高度な分析。",
-
-            dashboardTitle:
-            "AI分析",
-
-            dashboardSubtitle:
-            "リアルタイム企業モニタリング。",
-
-            stat1text:
-            "効率",
-
-            stat2text:
-            "成長",
-
-            stat3text:
-            "AIシステム",
-
-            stat4text:
-            "処理済みリクエスト"
         }
+
     };
 
     const flash =
@@ -567,74 +448,80 @@
 
             flash.classList.add("flash-active");
 
+            /* CHANGE LANGUAGE MID SWEEP */
+
+            setTimeout(() => {
+
+                document.querySelector(".logo").innerText =
+                translations[selected].logo;
+
+                document.querySelector(".services").innerText =
+                translations[selected].services;
+
+                document.querySelector(".automation").innerText =
+                translations[selected].automation;
+
+                document.querySelector(".contact").innerText =
+                translations[selected].contact;
+
+                document.querySelector(".mini-title").innerText =
+                translations[selected].mini;
+
+                document.querySelector(".hero-title").innerText =
+                translations[selected].title;
+
+                document.querySelector(".hero-description").innerText =
+                translations[selected].description;
+
+                document.querySelector(".gold-btn").innerText =
+                translations[selected].button1;
+
+                document.querySelector(".dark-btn").innerText =
+                translations[selected].button2;
+
+                document.querySelector(".card1").innerText =
+                translations[selected].card1;
+
+                document.querySelector(".card1desc").innerText =
+                translations[selected].card1desc;
+
+                document.querySelector(".card2").innerText =
+                translations[selected].card2;
+
+                document.querySelector(".card2desc").innerText =
+                translations[selected].card2desc;
+
+                document.querySelector(".card3").innerText =
+                translations[selected].card3;
+
+                document.querySelector(".card3desc").innerText =
+                translations[selected].card3desc;
+
+                document.querySelector(".dashboard-title").innerText =
+                translations[selected].dashboardTitle;
+
+                document.querySelector(".dashboard-subtitle").innerText =
+                translations[selected].dashboardSubtitle;
+
+                document.querySelector(".stat1text").innerText =
+                translations[selected].stat1text;
+
+                document.querySelector(".stat2text").innerText =
+                translations[selected].stat2text;
+
+                document.querySelector(".stat3text").innerText =
+                translations[selected].stat3text;
+
+                document.querySelector(".stat4text").innerText =
+                translations[selected].stat4text;
+
+            }, 240);
+
             setTimeout(() => {
 
                 flash.classList.remove("flash-active");
 
-            }, 900);
-
-            document.querySelector(".logo").innerText =
-            translations[selected].logo;
-
-            document.querySelector(".services").innerText =
-            translations[selected].services;
-
-            document.querySelector(".automation").innerText =
-            translations[selected].automation;
-
-            document.querySelector(".contact").innerText =
-            translations[selected].contact;
-
-            document.querySelector(".mini-title").innerText =
-            translations[selected].mini;
-
-            document.querySelector(".hero-title").innerText =
-            translations[selected].title;
-
-            document.querySelector(".hero-description").innerText =
-            translations[selected].description;
-
-            document.querySelector(".gold-btn").innerText =
-            translations[selected].button1;
-
-            document.querySelector(".dark-btn").innerText =
-            translations[selected].button2;
-
-            document.querySelector(".card1").innerText =
-            translations[selected].card1;
-
-            document.querySelector(".card1desc").innerText =
-            translations[selected].card1desc;
-
-            document.querySelector(".card2").innerText =
-            translations[selected].card2;
-
-            document.querySelector(".card2desc").innerText =
-            translations[selected].card2desc;
-
-            document.querySelector(".card3").innerText =
-            translations[selected].card3;
-
-            document.querySelector(".card3desc").innerText =
-            translations[selected].card3desc;
-
-            document.querySelector(".dashboard-title").innerText =
-            translations[selected].dashboardTitle;
-
-            document.querySelector(".dashboard-subtitle").innerText =
-            translations[selected].dashboardSubtitle;
-
-            document.querySelector(".stat1text").innerText =
-            translations[selected].stat1text;
-
-            document.querySelector(".stat2text").innerText =
-            translations[selected].stat2text;
-
-            document.querySelector(".stat3text").innerText =
-            translations[selected].stat3text;
-
-            document.querySelector(".stat4text").innerText =
-            translations[selected].stat4text;
+            }, 600);
 
         });
 

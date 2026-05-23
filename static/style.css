@@ -2,14 +2,17 @@ body{
 
     margin:0;
 
-    font-family:Arial, sans-serif;
-
     background:
     radial-gradient(
         circle at top,
-        #151515,
+        #171717,
         #050505 65%
     );
+
+    font-family:
+    "Noto Sans",
+    Arial,
+    sans-serif;
 
     color:white;
 
@@ -30,13 +33,14 @@ nav{
 
     align-items:center;
 
-    padding:30px 70px;
+    padding:28px 70px;
 
     box-sizing:border-box;
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
 
-    background:rgba(0,0,0,0.18);
+    background:
+    rgba(0,0,0,0.18);
 
     z-index:1000;
 }
@@ -52,22 +56,33 @@ nav{
     letter-spacing:3px;
 }
 
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+}
+
 ul{
 
     display:flex;
 
-    gap:50px;
-
     list-style:none;
+
+    gap:45px;
+
+    margin:0;
 }
 
 li{
 
+    color:#d0d0d0;
+
     cursor:pointer;
 
     transition:0.3s;
-
-    color:#d6d6d6;
 }
 
 li:hover{
@@ -75,11 +90,60 @@ li:hover{
     color:#d4af37;
 }
 
+/* LANGUAGES */
+
+.languages{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:10px 16px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,0.04);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+}
+
+.lang{
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    opacity:0.55;
+}
+
+.lang:hover{
+
+    transform:
+    translateY(-3px)
+    scale(1.08);
+
+    opacity:1;
+}
+
+.active{
+
+    opacity:1;
+
+    filter:
+    drop-shadow(0px 0px 10px rgba(212,175,55,0.45));
+}
+
 /* HERO */
 
 .hero{
-
-    position:relative;
 
     min-height:100vh;
 
@@ -92,15 +156,56 @@ li:hover{
     text-align:center;
 
     padding:0 20px;
+
+    position:relative;
+
+    overflow:hidden;
 }
 
-.hero-overlay{
+/* 3D ORB */
+
+.orb{
 
     position:absolute;
 
-    width:700px;
+    width:520px;
 
-    height:700px;
+    height:520px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle at 30% 30%,
+        rgba(255,230,170,0.95),
+        rgba(212,175,55,0.45),
+        rgba(90,60,10,0.15),
+        transparent 75%
+    );
+
+    filter:
+    blur(12px);
+
+    opacity:0.75;
+
+    animation:
+    floatOrb 8s ease-in-out infinite;
+
+    z-index:1;
+
+    box-shadow:
+    0px 0px 120px rgba(212,175,55,0.18);
+}
+
+/* EXTRA GLOW */
+
+.hero-glow{
+
+    position:absolute;
+
+    width:750px;
+
+    height:750px;
 
     background:
     radial-gradient(
@@ -109,14 +214,18 @@ li:hover{
         transparent 70%
     );
 
-    filter:blur(40px);
+    filter:blur(45px);
+
+    z-index:1;
 }
+
+/* HERO CONTENT */
 
 .hero-content{
 
     position:relative;
 
-    z-index:2;
+    z-index:5;
 
     max-width:1000px;
 }
@@ -127,14 +236,14 @@ li:hover{
 
     letter-spacing:4px;
 
-    font-size:14px;
+    font-size:13px;
 }
 
 .hero h1{
 
-    font-size:82px;
+    font-size:88px;
 
-    line-height:1.05;
+    line-height:1.02;
 
     margin-top:25px;
 
@@ -143,20 +252,21 @@ li:hover{
     color:#f5deb3;
 
     text-shadow:
-    0px 0px 30px rgba(212,175,55,0.1);
+    0px 0px 20px rgba(212,175,55,0.12),
+    0px 0px 40px rgba(212,175,55,0.08);
 }
 
 .hero p{
+
+    max-width:800px;
+
+    margin:auto;
 
     font-size:22px;
 
     line-height:1.8;
 
     color:#b8b8b8;
-
-    max-width:800px;
-
-    margin:auto;
 }
 
 /* BUTTONS */
@@ -198,6 +308,9 @@ li:hover{
     cursor:pointer;
 
     transition:0.35s;
+
+    box-shadow:
+    0px 10px 40px rgba(212,175,55,0.2);
 }
 
 .gold-btn:hover{
@@ -206,7 +319,7 @@ li:hover{
     translateY(-5px);
 
     box-shadow:
-    0px 15px 50px rgba(212,175,55,0.25);
+    0px 20px 60px rgba(212,175,55,0.35);
 }
 
 .dark-btn{
@@ -216,7 +329,7 @@ li:hover{
     border-radius:14px;
 
     border:
-    1px solid rgba(255,255,255,0.15);
+    1px solid rgba(255,255,255,0.12);
 
     background:
     rgba(255,255,255,0.03);
@@ -226,6 +339,8 @@ li:hover{
     cursor:pointer;
 
     transition:0.35s;
+
+    backdrop-filter:blur(10px);
 }
 
 .dark-btn:hover{
@@ -268,14 +383,19 @@ li:hover{
     color:white;
 
     background:
-    rgba(255,255,255,0.03);
+    rgba(255,255,255,0.035);
 
     border:
-    1px solid rgba(255,255,255,0.08);
+    1px solid rgba(255,255,255,0.09);
 
-    backdrop-filter:blur(14px);
+    backdrop-filter:
+    blur(18px);
 
     transition:0.4s;
+
+    box-shadow:
+    inset 0px 1px 1px rgba(255,255,255,0.04),
+    0px 10px 50px rgba(0,0,0,0.35);
 }
 
 .card:hover{
@@ -292,9 +412,9 @@ li:hover{
 
 .card-number{
 
-    font-size:14px;
-
     color:#c9a227;
+
+    font-size:14px;
 
     letter-spacing:3px;
 
@@ -315,4 +435,30 @@ li:hover{
     color:#b8b8b8;
 
     line-height:1.8;
+}
+
+/* FLOATING ORB */
+
+@keyframes floatOrb{
+
+    0%{
+
+        transform:
+        translateY(0px)
+        scale(1);
+    }
+
+    50%{
+
+        transform:
+        translateY(-20px)
+        scale(1.03);
+    }
+
+    100%{
+
+        transform:
+        translateY(0px)
+        scale(1);
+    }
 }

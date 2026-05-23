@@ -73,6 +73,8 @@
 
     <section class="hero">
 
+        <div class="animated-bg"></div>
+
         <div class="orb"></div>
 
         <div class="hero-glow"></div>
@@ -197,8 +199,7 @@
 
             <p class="dashboard-subtitle">
 
-                Monitor intelligent automation,
-                productivity and business growth in real time.
+                Real-time intelligent business monitoring.
 
             </p>
 
@@ -206,11 +207,11 @@
 
                 <div class="stat">
 
-                    <h3>
-                        98%
+                    <h3 class="stat1">
+                        0%
                     </h3>
 
-                    <p>
+                    <p class="stat1text">
                         Automation Efficiency
                     </p>
 
@@ -218,11 +219,11 @@
 
                 <div class="stat">
 
-                    <h3>
-                        +240%
+                    <h3 class="stat2">
+                        0
                     </h3>
 
-                    <p>
+                    <p class="stat2text">
                         Productivity Growth
                     </p>
 
@@ -230,23 +231,23 @@
 
                 <div class="stat">
 
-                    <h3>
-                        24/7
+                    <h3 class="stat3">
+                        0
                     </h3>
 
-                    <p>
-                        AI Monitoring
+                    <p class="stat3text">
+                        Active AI Systems
                     </p>
 
                 </div>
 
                 <div class="stat">
 
-                    <h3>
-                        1.2M
+                    <h3 class="stat4">
+                        0
                     </h3>
 
-                    <p>
+                    <p class="stat4text">
                         Processed Requests
                     </p>
 
@@ -257,6 +258,47 @@
         </div>
 
     </section>
+
+    <!-- MINI AI -->
+
+    <div class="mini-ai">
+
+        <div class="ai-header">
+
+            AI Assistant
+
+        </div>
+
+        <div class="ai-chat">
+
+            <div class="ai-message">
+
+                Welcome to AI Systems.
+                Interactive AI coming soon.
+
+            </div>
+
+        </div>
+
+        <div class="ai-input">
+
+            <input
+            type="text"
+            placeholder="Ask AI...">
+
+            <button>
+
+                Send
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- LANGUAGE TRANSITION -->
+
+    <div class="language-flash"></div>
 
     <!-- LANGUAGE SYSTEM -->
 
@@ -303,7 +345,25 @@
             "Analytics",
 
             card3desc:
-            "Advanced AI-powered insights and statistics."
+            "Advanced AI-powered insights and statistics.",
+
+            dashboardTitle:
+            "AI Performance Analytics",
+
+            dashboardSubtitle:
+            "Real-time intelligent business monitoring.",
+
+            stat1text:
+            "Automation Efficiency",
+
+            stat2text:
+            "Productivity Growth",
+
+            stat3text:
+            "Active AI Systems",
+
+            stat4text:
+            "Processed Requests"
         },
 
         es: {
@@ -345,7 +405,25 @@
             "Estadísticas",
 
             card3desc:
-            "Insights y análisis potenciados por IA."
+            "Insights y análisis potenciados por IA.",
+
+            dashboardTitle:
+            "Análisis IA",
+
+            dashboardSubtitle:
+            "Monitoreo inteligente empresarial en tiempo real.",
+
+            stat1text:
+            "Eficiencia",
+
+            stat2text:
+            "Crecimiento",
+
+            stat3text:
+            "Sistemas IA activos",
+
+            stat4text:
+            "Solicitudes procesadas"
         },
 
         zh: {
@@ -387,7 +465,25 @@
             "分析",
 
             card3desc:
-            "AI驱动的高级数据分析。"
+            "AI驱动的高级数据分析。",
+
+            dashboardTitle:
+            "人工智能分析",
+
+            dashboardSubtitle:
+            "实时智能企业监控。",
+
+            stat1text:
+            "自动化效率",
+
+            stat2text:
+            "生产增长",
+
+            stat3text:
+            "AI 系统",
+
+            stat4text:
+            "处理请求"
         },
 
         jp: {
@@ -429,9 +525,30 @@
             "分析",
 
             card3desc:
-            "AIによる高度な分析。"
+            "AIによる高度な分析。",
+
+            dashboardTitle:
+            "AI分析",
+
+            dashboardSubtitle:
+            "リアルタイム企業モニタリング。",
+
+            stat1text:
+            "効率",
+
+            stat2text:
+            "成長",
+
+            stat3text:
+            "AIシステム",
+
+            stat4text:
+            "処理済みリクエスト"
         }
     };
+
+    const flash =
+    document.querySelector(".language-flash");
 
     const langs = document.querySelectorAll(".lang");
 
@@ -447,6 +564,14 @@
 
             const selected =
             lang.dataset.lang;
+
+            flash.classList.add("flash-active");
+
+            setTimeout(() => {
+
+                flash.classList.remove("flash-active");
+
+            }, 900);
 
             document.querySelector(".logo").innerText =
             translations[selected].logo;
@@ -492,6 +617,24 @@
 
             document.querySelector(".card3desc").innerText =
             translations[selected].card3desc;
+
+            document.querySelector(".dashboard-title").innerText =
+            translations[selected].dashboardTitle;
+
+            document.querySelector(".dashboard-subtitle").innerText =
+            translations[selected].dashboardSubtitle;
+
+            document.querySelector(".stat1text").innerText =
+            translations[selected].stat1text;
+
+            document.querySelector(".stat2text").innerText =
+            translations[selected].stat2text;
+
+            document.querySelector(".stat3text").innerText =
+            translations[selected].stat3text;
+
+            document.querySelector(".stat4text").innerText =
+            translations[selected].stat4text;
 
         });
 

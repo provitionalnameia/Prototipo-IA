@@ -73,11 +73,7 @@
 
     <section class="hero">
 
-        <!-- ORB -->
-
         <div class="orb"></div>
-
-        <!-- EXTRA GLOW -->
 
         <div class="hero-glow"></div>
 
@@ -128,8 +124,6 @@
 
     <section class="cards">
 
-        <!-- CARD 1 -->
-
         <a href="/atencion" class="card">
 
             <div class="card-number">
@@ -137,9 +131,7 @@
             </div>
 
             <h3 class="card1">
-
                 AI Support
-
             </h3>
 
             <p class="card1desc">
@@ -151,8 +143,6 @@
 
         </a>
 
-        <!-- CARD 2 -->
-
         <a href="/automatizacion" class="card">
 
             <div class="card-number">
@@ -160,9 +150,7 @@
             </div>
 
             <h3 class="card2">
-
                 Automation
-
             </h3>
 
             <p class="card2desc">
@@ -174,8 +162,6 @@
 
         </a>
 
-        <!-- CARD 3 -->
-
         <a href="/estadisticas" class="card">
 
             <div class="card-number">
@@ -183,9 +169,7 @@
             </div>
 
             <h3 class="card3">
-
                 Analytics
-
             </h3>
 
             <p class="card3desc">
@@ -196,6 +180,81 @@
             </p>
 
         </a>
+
+    </section>
+
+    <!-- DASHBOARD -->
+
+    <section class="dashboard">
+
+        <div class="dashboard-box">
+
+            <h2 class="dashboard-title">
+
+                AI Performance Analytics
+
+            </h2>
+
+            <p class="dashboard-subtitle">
+
+                Monitor intelligent automation,
+                productivity and business growth in real time.
+
+            </p>
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <h3>
+                        98%
+                    </h3>
+
+                    <p>
+                        Automation Efficiency
+                    </p>
+
+                </div>
+
+                <div class="stat">
+
+                    <h3>
+                        +240%
+                    </h3>
+
+                    <p>
+                        Productivity Growth
+                    </p>
+
+                </div>
+
+                <div class="stat">
+
+                    <h3>
+                        24/7
+                    </h3>
+
+                    <p>
+                        AI Monitoring
+                    </p>
+
+                </div>
+
+                <div class="stat">
+
+                    <h3>
+                        1.2M
+                    </h3>
+
+                    <p>
+                        Processed Requests
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
 
@@ -389,8 +448,6 @@
             const selected =
             lang.dataset.lang;
 
-            /* NAVBAR */
-
             document.querySelector(".logo").innerText =
             translations[selected].logo;
 
@@ -402,8 +459,6 @@
 
             document.querySelector(".contact").innerText =
             translations[selected].contact;
-
-            /* HERO */
 
             document.querySelector(".mini-title").innerText =
             translations[selected].mini;
@@ -419,8 +474,6 @@
 
             document.querySelector(".dark-btn").innerText =
             translations[selected].button2;
-
-            /* CARDS */
 
             document.querySelector(".card1").innerText =
             translations[selected].card1;

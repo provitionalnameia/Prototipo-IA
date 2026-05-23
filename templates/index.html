@@ -29,11 +29,17 @@
 
             <ul>
 
-                <li>Services</li>
+                <li class="services">
+                    Services
+                </li>
 
-                <li>Automation</li>
+                <li class="automation">
+                    Automation
+                </li>
 
-                <li>Contact</li>
+                <li class="contact">
+                    Contact
+                </li>
 
             </ul>
 
@@ -41,19 +47,19 @@
 
             <div class="languages">
 
-                <span class="lang active">
+                <span class="lang active" data-lang="en">
                     🇺🇸
                 </span>
 
-                <span class="lang">
+                <span class="lang" data-lang="es">
                     🇪🇸
                 </span>
 
-                <span class="lang">
+                <span class="lang" data-lang="zh">
                     🇨🇳
                 </span>
 
-                <span class="lang">
+                <span class="lang" data-lang="jp">
                     🇯🇵
                 </span>
 
@@ -67,11 +73,11 @@
 
     <section class="hero">
 
-        <!-- 3D ORB -->
+        <!-- ORB -->
 
         <div class="orb"></div>
 
-        <!-- EXTRA GLOW -->
+        <!-- GLOW -->
 
         <div class="hero-glow"></div>
 
@@ -81,15 +87,19 @@
                 ARTIFICIAL INTELLIGENCE FOR MODERN BUSINESSES
             </span>
 
-            <h1>
+            <h1 class="hero-title">
+
                 Intelligent automation
                 for modern companies
+
             </h1>
 
-            <p>
+            <p class="hero-description">
+
                 We create elegant AI systems capable of
                 automating processes, improving productivity
                 and transforming digital businesses worldwide.
+
             </p>
 
             <div class="hero-buttons">
@@ -164,6 +174,130 @@
         </a>
 
     </section>
+
+    <!-- LANGUAGE SYSTEM -->
+
+    <script>
+
+    const translations = {
+
+        en: {
+
+            services: "Services",
+            automation: "Automation",
+            contact: "Contact",
+
+            title:
+            "Intelligent automation for modern companies",
+
+            description:
+            "We create elegant AI systems capable of automating processes, improving productivity and transforming digital businesses worldwide.",
+
+            button1:
+            "Get Started",
+
+            button2:
+            "Live Demo"
+        },
+
+        es: {
+
+            services: "Servicios",
+            automation: "Automatización",
+            contact: "Contacto",
+
+            title:
+            "Automatización inteligente para negocios modernos",
+
+            description:
+            "Creamos sistemas de inteligencia artificial capaces de automatizar procesos, mejorar productividad y transformar negocios digitales.",
+
+            button1:
+            "Comenzar",
+
+            button2:
+            "Ver Demo"
+        },
+
+        zh: {
+
+            services: "服务",
+            automation: "自动化",
+            contact: "联系",
+
+            title:
+            "现代企业智能自动化",
+
+            description:
+            "我们创建优雅的人工智能系统，用于自动化流程并提升企业效率。",
+
+            button1:
+            "开始",
+
+            button2:
+            "演示"
+        },
+
+        jp: {
+
+            services: "サービス",
+            automation: "自動化",
+            contact: "連絡先",
+
+            title:
+            "現代企業向けAI自動化",
+
+            description:
+            "AIシステムによって業務を自動化し、生産性を向上させます。",
+
+            button1:
+            "開始",
+
+            button2:
+            "デモ"
+        }
+    };
+
+    const langs = document.querySelectorAll(".lang");
+
+    langs.forEach(lang => {
+
+        lang.addEventListener("click", () => {
+
+            langs.forEach(l =>
+                l.classList.remove("active")
+            );
+
+            lang.classList.add("active");
+
+            const selected =
+            lang.dataset.lang;
+
+            document.querySelector(".services").innerText =
+            translations[selected].services;
+
+            document.querySelector(".automation").innerText =
+            translations[selected].automation;
+
+            document.querySelector(".contact").innerText =
+            translations[selected].contact;
+
+            document.querySelector(".hero-title").innerText =
+            translations[selected].title;
+
+            document.querySelector(".hero-description").innerText =
+            translations[selected].description;
+
+            document.querySelector(".gold-btn").innerText =
+            translations[selected].button1;
+
+            document.querySelector(".dark-btn").innerText =
+            translations[selected].button2;
+        });
+
+    });
+
+    </script>
 
 </body>
 

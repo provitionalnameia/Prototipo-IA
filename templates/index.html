@@ -48,19 +48,19 @@
             <div class="languages">
 
                 <span class="lang active" data-lang="en">
-                    🇺🇸
+                    US
                 </span>
 
                 <span class="lang" data-lang="es">
-                    🇪🇸
+                    ES
                 </span>
 
                 <span class="lang" data-lang="zh">
-                    🇨🇳
+                    CN
                 </span>
 
                 <span class="lang" data-lang="jp">
-                    🇯🇵
+                    JP
                 </span>
 
             </div>
@@ -77,14 +77,16 @@
 
         <div class="orb"></div>
 
-        <!-- GLOW -->
+        <!-- EXTRA GLOW -->
 
         <div class="hero-glow"></div>
 
         <div class="hero-content">
 
             <span class="mini-title">
+
                 ARTIFICIAL INTELLIGENCE FOR MODERN BUSINESSES
+
             </span>
 
             <h1 class="hero-title">
@@ -105,11 +107,15 @@
             <div class="hero-buttons">
 
                 <button class="gold-btn">
+
                     Get Started
+
                 </button>
 
                 <button class="dark-btn">
+
                     Live Demo
+
                 </button>
 
             </div>
@@ -122,22 +128,30 @@
 
     <section class="cards">
 
+        <!-- CARD 1 -->
+
         <a href="/atencion" class="card">
 
             <div class="card-number">
                 01
             </div>
 
-            <h3>
+            <h3 class="card1">
+
                 AI Support
+
             </h3>
 
-            <p>
+            <p class="card1desc">
+
                 Intelligent real-time
                 customer assistance.
+
             </p>
 
         </a>
+
+        <!-- CARD 2 -->
 
         <a href="/automatizacion" class="card">
 
@@ -145,16 +159,22 @@
                 02
             </div>
 
-            <h3>
+            <h3 class="card2">
+
                 Automation
+
             </h3>
 
-            <p>
+            <p class="card2desc">
+
                 Smart automation systems
                 for modern businesses.
+
             </p>
 
         </a>
+
+        <!-- CARD 3 -->
 
         <a href="/estadisticas" class="card">
 
@@ -162,13 +182,17 @@
                 03
             </div>
 
-            <h3>
+            <h3 class="card3">
+
                 Analytics
+
             </h3>
 
-            <p>
+            <p class="card3desc">
+
                 Advanced AI-powered
                 insights and statistics.
+
             </p>
 
         </a>
@@ -183,9 +207,14 @@
 
         en: {
 
+            logo: "AI SYSTEMS",
+
             services: "Services",
             automation: "Automation",
             contact: "Contact",
+
+            mini:
+            "ARTIFICIAL INTELLIGENCE FOR MODERN BUSINESSES",
 
             title:
             "Intelligent automation for modern companies",
@@ -197,14 +226,37 @@
             "Get Started",
 
             button2:
-            "Live Demo"
+            "Live Demo",
+
+            card1:
+            "AI Support",
+
+            card1desc:
+            "Intelligent real-time customer assistance.",
+
+            card2:
+            "Automation",
+
+            card2desc:
+            "Smart automation systems for modern businesses.",
+
+            card3:
+            "Analytics",
+
+            card3desc:
+            "Advanced AI-powered insights and statistics."
         },
 
         es: {
 
+            logo: "AI SYSTEMS",
+
             services: "Servicios",
             automation: "Automatización",
             contact: "Contacto",
+
+            mini:
+            "INTELIGENCIA ARTIFICIAL PARA NEGOCIOS MODERNOS",
 
             title:
             "Automatización inteligente para negocios modernos",
@@ -216,14 +268,37 @@
             "Comenzar",
 
             button2:
-            "Ver Demo"
+            "Ver Demo",
+
+            card1:
+            "Soporte IA",
+
+            card1desc:
+            "Asistencia inteligente para clientes en tiempo real.",
+
+            card2:
+            "Automatización",
+
+            card2desc:
+            "Sistemas automáticos para empresas modernas.",
+
+            card3:
+            "Estadísticas",
+
+            card3desc:
+            "Insights y análisis potenciados por IA."
         },
 
         zh: {
 
+            logo: "AI 系统",
+
             services: "服务",
             automation: "自动化",
             contact: "联系",
+
+            mini:
+            "现代企业人工智能",
 
             title:
             "现代企业智能自动化",
@@ -235,14 +310,37 @@
             "开始",
 
             button2:
-            "演示"
+            "演示",
+
+            card1:
+            "AI 支持",
+
+            card1desc:
+            "实时智能客户支持。",
+
+            card2:
+            "自动化",
+
+            card2desc:
+            "现代企业智能自动化系统。",
+
+            card3:
+            "分析",
+
+            card3desc:
+            "AI驱动的高级数据分析。"
         },
 
         jp: {
 
+            logo: "AI システム",
+
             services: "サービス",
             automation: "自動化",
             contact: "連絡先",
+
+            mini:
+            "現代企業向け人工知能",
 
             title:
             "現代企業向けAI自動化",
@@ -254,7 +352,25 @@
             "開始",
 
             button2:
-            "デモ"
+            "デモ",
+
+            card1:
+            "AIサポート",
+
+            card1desc:
+            "リアルタイムの顧客サポート。",
+
+            card2:
+            "自動化",
+
+            card2desc:
+            "現代企業向け自動化システム。",
+
+            card3:
+            "分析",
+
+            card3desc:
+            "AIによる高度な分析。"
         }
     };
 
@@ -273,6 +389,11 @@
             const selected =
             lang.dataset.lang;
 
+            /* NAVBAR */
+
+            document.querySelector(".logo").innerText =
+            translations[selected].logo;
+
             document.querySelector(".services").innerText =
             translations[selected].services;
 
@@ -281,6 +402,11 @@
 
             document.querySelector(".contact").innerText =
             translations[selected].contact;
+
+            /* HERO */
+
+            document.querySelector(".mini-title").innerText =
+            translations[selected].mini;
 
             document.querySelector(".hero-title").innerText =
             translations[selected].title;
@@ -293,6 +419,27 @@
 
             document.querySelector(".dark-btn").innerText =
             translations[selected].button2;
+
+            /* CARDS */
+
+            document.querySelector(".card1").innerText =
+            translations[selected].card1;
+
+            document.querySelector(".card1desc").innerText =
+            translations[selected].card1desc;
+
+            document.querySelector(".card2").innerText =
+            translations[selected].card2;
+
+            document.querySelector(".card2desc").innerText =
+            translations[selected].card2desc;
+
+            document.querySelector(".card3").innerText =
+            translations[selected].card3;
+
+            document.querySelector(".card3desc").innerText =
+            translations[selected].card3desc;
+
         });
 
     });
